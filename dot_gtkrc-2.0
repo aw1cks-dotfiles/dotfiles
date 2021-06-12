@@ -1,0 +1,7 @@
+gtk-theme-name="oomox-default-dark"
+gtk-icon-theme-name="oomox-default-dark"
+gtk-font-name="SF Pro Display 11"
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintslight"
+gtk-xft-rgba="rgb"

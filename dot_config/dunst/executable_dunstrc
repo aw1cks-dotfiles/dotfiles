@@ -1,0 +1,61 @@
+[global]
+
+font = sans-serif 13
+
+frame_width = 0
+frame_color = "#d8d8d8"
+
+geometry = "450x45-8+34"
+indicate_hidden = yes
+shrink = no
+
+transparency = 35
+foreground = "#e8e8e8"
+notification_height = 0
+seperator_height = 2
+padding = 5
+seperator_color = frame
+sort = yes
+line_height = 0
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+word_wrap = yes
+ellipsize = middle
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = yes
+
+icon_position = right
+max_icon_size = 96
+icon_path = /home/alex/.icons/oomox-default-dark/status/16:/home/alex/.icons/oomox-default-dark/devices/16
+
+sticky_history = yes
+history_length = 20
+
+dmenu = /usr/bin/rofi -dmenu -p dunst:
+browser = /usr/bin/firefox -new-tab
+always_run_script = true
+
+title = Dunst
+class = Dunst
+
+startup_notification = false
+
+[seperator]
+    color = "#d8d8d8"
+
+[base16_low]
+    msg_urgency = low
+    background = "#282828"
+    foreground = "#cccccc"
+
+[base16_normal]
+    msg_urgency = normal
+    background = "#383838"
+    foreground = "#d8d8d8"
+
+[base16_critical]
+    msg_urgency = critical
+    background = "#ab4642"

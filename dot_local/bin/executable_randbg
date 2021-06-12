@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BGDIR='/home/alex/Pictures/wallpapers'
+
+while true
+do
+  feh --no-fehbg --bg-scale --randomize -r $BGDIR
+  sleep 60
+done
