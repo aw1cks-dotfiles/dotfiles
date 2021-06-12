@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BGDIR='/home/alex/Pictures/wallpapers'
+BGDIR='/home/alex/.local/share/wallpapers/images'
 
 while true
 do
