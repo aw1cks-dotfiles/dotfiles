@@ -1,0 +1,65 @@
+add_newline = false
+format="$all"
+
+[battery]
+format = '\[[$symbol$percentage]($style)\]'
+
+[[battery.display]]
+threshold = 15
+style = "bold red"
+[[battery.display]]
+threshold = 25
+style = "bold yellow"
+
+
+[character]
+success_symbol = "[»](purple)"
+error_symbol = "[»](red bold)"
+
+[cmake]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[directory]
+format = "[$path]($style)"
+style = "37"
+truncate_to_repo = false
+truncation_length = "3"
+truncation_symbol = "ﬔ/"
+
+[git_branch]
+format = '[\($symbol](white)[$branch]($style)[\)](white)'
+style = "26 bold"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+style = "158 bold"
+
+[hostname]
+format = "[$hostname](cyan)[::](yellow bold)"
+
+[kubernetes]
+disabled = false
+format = '\[$symbol[$context](30) [$namespace](67)\]'
+
+[line_break]
+disabled = true
+
+[python]
+format = '[\[](white)[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)[\]](white)'
+style = "yellow"
+
+[terraform]
+format = '\[[$symbol$workspace]($style)\]'
+
+[username]
+style_user = "150"
+style_root = "red"
+format = "[$user]($style)[@](bold)"
+
+[vagrant]
+format = '\[[$symbol($version)]($style)\]'
+version_format = "${major}.${minor}"
+style = "blue bold"
