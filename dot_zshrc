@@ -109,7 +109,7 @@ alias ytm='youtube-dl -x --audio-format mp3'
 alias lvpnlog='docker logs -f ldnvpn'
 
 [ -f "~/.config/zsh_plugins.sh" ] && source ~/.config/zsh_plugins.sh || antibody-update
-source ~/.config/gbt
+eval "$(starship init zsh)"
 source /usr/share/fzf/key-bindings.zsh
 
 autoload -U +X bashcompinit && bashcompinit
