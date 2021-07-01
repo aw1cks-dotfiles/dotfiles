@@ -1,6 +1,6 @@
-gtk-theme-name="oomox-dark"
-gtk-icon-theme-name="Suru++-Dark"
-gtk-font-name="SF Pro Display 11"
+gtk-theme-name="oomox"
+gtk-icon-theme-name="oomox"
+gtk-font-name="sans 11"
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintslight"

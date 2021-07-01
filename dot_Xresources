@@ -1,0 +1,146 @@
+!
+! Begin colours
+! https://github.com/base16-templates/base16-xresources/blob/master/xresources/base16-default-dark-256.Xresources
+!
+
+#define base00 #181818
+#define base01 #282828
+#define base02 #383838
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #ab4642
+#define base09 #dc9656
+#define base0A #f7ca88
+#define base0B #a1b56c
+#define base0C #86c1b9
+#define base0D #7cafc2
+#define base0E #ba8baf
+#define base0F #a16946
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
+
+!
+! End Colours
+!
+
+Xcursor.size: 16
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!
+! Begin xlockmore config
+!
+
+XLock.mode: euler2d
+XLock.allowaccess: off
+XLock.debug: off
+XLock.description: on
+XLock.echokeys: off
+XLock.echokey: ?
+XLock.enablesaver: off
+XLock.resetsaver: on
+XLock.grabmouse: on
+XLock.grabserver: off
+XLock.hide: on
+XLock.install: on
+XLock.mousemotion: off
+XLock.mono: off
+XLock.sound: off
+XLock.showfps: off
+XLock.fpstop: on
+XLock.fpsfont: -*-droid sans-medium-r-*-*-24-*-*-*-*-*-*
+XLock.showdate: on
+XLock.timeelapsed: off
+XLock.usefirst: on
+XLock.verbose: off
+XLock.visual: 
+XLock.nice: 10
+XLock.lockdelay: 0
+XLock.unlockdelay: 0
+XLock.timeout: 30
+XLock.font: -*-terminus-bold-*-normal--24-*-,-*-*-bold-*-normal--14-*-,-*-*-medium-*-normal--14-*-
+XLock.planfont: -*-terminus-bold-*-normal--12-*-,-*-*-bold-*-normal--12-*-
+XLock.fontset: -*-terminus-bold-*-normal--24-*-,-*-*-bold-*-normal--14-*-,-*-*-medium-*-normal--14-*-
+XLock.planfontset: -*-terminus-bold-*-normal--12-*-,-*-*-bold-*-normal--12-*-
+XLock.background: Black
+XLock.foreground: White
+XLock.username: Name: 
+XLock.password: Password: 
+XLock.info: Enter password to unlock; select icon to lock.
+XLock.validate: Validating login...
+XLock.invalid: Invalid login.
+XLock.invalidCapsLock: Invalid login, Caps Lock on.
+XLock.attempt: %d failed attempt.
+XLock.attempts: %d failed attempts.
+XLock.geometry: 
+XLock.icongeometry: 
+XLock.wireframe: off
+XLock.use3d: off
+XLock.delta3d: 1.5
+XLock.none3d: Black
+XLock.right3d: Blue
+XLock.left3d: Red
+XLock.both3d: Magenta
+XLock.program: fortune -s
+XLock.messagesfile: 
+XLock.messagefile: 
+XLock.message: 
+XLock.messagefont: -*-droid serif-*-*-*-*-18-*-*-*-*-*-*-*
+XLock.logoutButton: -1
+XLock.logoutButtonLabel: Logout
+XLock.logoutButtonHelp: Click here to logout
+XLock.logoutFailedString: Auto-logout failed
+XLock.enablekbdmon: on
+XLock.kbdmonLabel: Keyboard state: 
+XLock.endCmd: 
+XLock.pipepassCmd: 
+XLock.logoutCmd: 
+XLock.nologout: off
+XLock.dpmsstandby: -1
+XLock.dpmssuspend: -1
+XLock.dpmsoff: -1
+XLock.mailCmd: 
+XLock.mailIcon: 
+XLock.nomailIcon: 
+XLock.vtlock: off
+
+!
+! End xlockmore config
+!
