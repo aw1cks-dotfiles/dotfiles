@@ -105,6 +105,7 @@ alias grv="git remote -v"
 alias gcm='git checkout master'
 alias tmux='tmux -u'
 alias antibody-update="antibody bundle < ~/.config/zsh_plugins.txt > ~/.config/zsh_plugins.sh"
+alias yay='sudo -u aurbuilder yay'
 alias yayskip='yay -S --mflags --skipinteg'
 alias ytm='youtube-dl -x --audio-format mp3'
 alias lvpnlog='docker logs -f ldnvpn'

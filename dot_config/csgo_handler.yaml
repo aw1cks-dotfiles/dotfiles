@@ -1,0 +1,9 @@
+---
+
+path: /opt/games/steamapps/common/Counter-Strike Global Offensive/csgo.sh
+start_script:
+  - /home/alex/.local/bin/csgorun
+  - start
+stop_script:
+  - /home/alex/.local/bin/csgorun
+  - stop
