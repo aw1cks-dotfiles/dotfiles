@@ -11,7 +11,6 @@ style = "bold red"
 threshold = 25
 style = "bold yellow"
 
-
 [character]
 success_symbol = "[»](purple)"
 error_symbol = "[»](red bold)"
@@ -37,19 +36,36 @@ style = "26 bold"
 format = '([\[$all_status$ahead_behind\]]($style))'
 style = "158 bold"
 
+[golang]
+format = '[\[](white)[${symbol}(${version})]($style)[\]](white)'
+style = "cyan"
+
+[helm]
+format = '[\[](white)[${symbol}(${version})]($style)[\]](white)'
+
 [hostname]
 format = "[$hostname](cyan)[::](yellow bold)"
 
+[java]
+format = '[\[](white)[${symbol}(${version})]($style)[\]](white)'
+symbol = "☕"
+
 [kubernetes]
 disabled = false
-format = '\[$symbol[$context](30) [$namespace](67)\]'
+format = '\[$symbol[$namespace](30).[$context](30)\]'
 
 [line_break]
 disabled = true
 
+[package]
+format = '[\[](white)[${symbol}(${version})]($style)[\]](white)'
+
 [python]
 format = '[\[](white)[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)[\]](white)'
 style = "yellow"
+
+[rust]
+format = '[\[](white)[${symbol}(${version})]($style)[\]](white)'
 
 [terraform]
 format = '\[[$symbol$workspace]($style)\]'

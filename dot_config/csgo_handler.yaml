@@ -2,8 +2,18 @@
 
 path: /opt/games/steamapps/common/Counter-Strike Global Offensive/csgo.sh
 start_script:
-  - /home/alex/.local/bin/csgorun
-  - start
+  - /bin/sh
+  - -c
+  - >-
+    nvidia-settings -a 'GPUPowerMizerMode=1';
+    pgrep picom && pkill picom;
+    pgrep dunst && dunstctl set-paused true;
+    nvidia-settings -a '0/DigitalVibrance[DFP-5]=1023'
 stop_script:
-  - /home/alex/.local/bin/csgorun
-  - stop
+  - /bin/sh
+  - -c
+  - >-
+    nvidia-settings -a 'GPUPowerMizerMode=2';
+    pgrep picom || picom --experimental-backends &;
+    pgrep dunst && dunstctl set-paused false;
+    nvidia-settings -a '0/DigitalVibrance[DFP-5]=0'
