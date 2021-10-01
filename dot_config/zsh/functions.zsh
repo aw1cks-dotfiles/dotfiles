@@ -1,14 +1,6 @@
 ###
 # Utility functions
 ###
-# detect current platform
-function _platform() {
-  if [ -z "${XDG_SESSION_TYPE}" ]; then
-    printf "$(uname)_$(uname -m)"
-  else
-    printf "$(uname)_${XDG_SESSION_TYPE}_$(uname -m)"
-  fi
-}
 # check binary present, else return an error
 function _check_bin_present() {
   if [ -z "$(command -v ${1})" ]; then
@@ -34,7 +26,7 @@ esac
 
 # Copy to clipboard
 function copy() {
-  case "$(_platform)" in
+  case "${PLATFORM}" in
     'Darwin'*)
       local cmd='pbcopy' 
       ;;
@@ -80,7 +72,7 @@ function copy() {
 
 # Paste from clipboard
 function paste() {
-  case "$(_platform)" in
+  case "${PLATFORM}" in
 
     'Darwin'*)
       local cmd='pbpaste' 
