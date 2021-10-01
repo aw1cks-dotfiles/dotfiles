@@ -6,14 +6,14 @@ start_script:
   - -c
   - >-
     nvidia-settings -a 'GPUPowerMizerMode=1';
-    pgrep picom && pkill picom;
-    pgrep dunst && dunstctl set-paused true;
-    nvidia-settings -a '0/DigitalVibrance[DFP-5]=1023'
+    nvidia-settings -a '0/DigitalVibrance[DFP-4]=1023';
+    (pgrep picom && pkill picom);
+    (pgrep dunst && dunstctl set-paused true)
 stop_script:
   - /bin/sh
   - -c
   - >-
     nvidia-settings -a 'GPUPowerMizerMode=2';
-    pgrep picom || picom --experimental-backends &;
-    pgrep dunst && dunstctl set-paused false;
-    nvidia-settings -a '0/DigitalVibrance[DFP-5]=0'
+    nvidia-settings -a '0/DigitalVibrance[DFP-4]=0';
+    (pgrep picom || picom --experimental-backends &);
+    (pgrep dunst && dunstctl set-paused false)

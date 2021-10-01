@@ -1,5 +1,18 @@
-alias grep='/bin/grep --color=auto'
-alias ls='ls --color=auto'
+# Platform specific
+case "${PLATFORM}" in
+  'Darwin'*)
+    alias grep='ggrep --color=auto'
+    alias ls='gls --color=auto'
+    ;;
+  'Linux'*)
+    alias grep='grep --color=auto'
+    alias ls='ls --color=auto'
+    ;;
+  *)
+    ;;
+esac
+
+# Generic
 alias ip='ip -c'
 alias ncdu='ncdu --color dark'
 alias tmux='tmux -u'

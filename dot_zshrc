@@ -4,11 +4,6 @@ SAVEHIST=10000
 
 
 
-# Get our brew paths loaded if macOS
-[ "$(uname)" = 'Darwin' ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-
-
-
 source ~/.config/zsh/options.zsh
 
 source ~/.config/zsh/binds.zsh
@@ -18,6 +13,8 @@ source ~/.config/zsh/binds.zsh
 source ~/.config/zsh/functions.zsh
 [ -f "${HOME}/.config/zsh/functions_local.zsh" ] && source ~/.config/zsh/functions_local.zsh
 
+source ~/.config/zsh/startup.zsh
+
 source ~/.config/zsh/aliases.zsh
 [ -f "${HOME}/.config/zsh/aliases_local.zsh" ] && source ~/.config/zsh/aliases_local.zsh
 
@@ -25,22 +22,3 @@ source ~/.config/zsh/exports.zsh
 [ -f "${HOME}/.config/zsh/exports_local.zsh" ] && source ~/.config/zsh/exports_local.zsh
 
 source ~/.config/zsh/colors.zsh
-
-
-
-[ -f "${HOME}/.config/zsh/plugins.zsh" ] || antibody-update
-source ~/.config/zsh/plugins.zsh
-
-eval "$(starship init zsh)"
-
-case "$(_platform)" in
-  'Linux'*) 
-    source /usr/share/fzf/key-bindings.zsh
-    ;;
-  'Darwin') 
-    source /opt/homebrew/Cellar/fzf/*/shell/key_bindings.zsh
-    source <(kubectl completion zsh)
-    ;;
-  *) 
-    ;;
-esac
