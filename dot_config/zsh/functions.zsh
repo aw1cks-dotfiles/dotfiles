@@ -182,14 +182,16 @@ function man() {
 function yay() {
   _check_bin_present 'yay' || return 1
 
-  local YAY_CMD='sudo -u aurbuilder yay --cleanafter --devel --nodiffmenu --noeditmenu --noremovemake --redownloadall --rebuildtree'
+  local YAY_CMD='sudo -u aurbuilder /usr/bin/yay --cleanafter --devel --nodiffmenu --noeditmenu --noremovemake --redownloadall --rebuildtree'
 
   if [ "$#" -eq 0 ]; then
     eval "${YAY_CMD} -Syu"
   else
     case $@ in
-      '-Q'*) eval "yay $@" ;;
-      *) eval "${YAY_CMD} $@" ;;
+      '-Q'*) /usr/bin/yay $@ ;;
+      *) 
+        eval "${YAY_CMD} $@"
+        ;;
     esac
   fi
 }

@@ -386,11 +386,11 @@ detect_files = ['.lua-version']
 detect_folders = ['lua']
 
 [memory_usage]
-threshold = 75
-format = '\{$symbol[$ram( | $swap)]($style)\}'
-style = 'white bold dimmed'
+threshold = 90
+format = ' [MEM ${ram}( | ${swap})]($style) '
+style = 'red bold dimmed'
 symbol = '🐏 '
-disabled = true
+disabled = false
 
 [nim]
 format = '(\[[$symbol$version]($style)\])'
@@ -484,7 +484,7 @@ disabled = false
 detect_extensions = [
     'pl',
     'pm',
-    'pod',
+  'pod',
 ]
 detect_files = [
     'Makefile.PL',
@@ -615,26 +615,26 @@ detect_files = [
 detect_folders = ['.metals']
 
 [shell]
-format = '$indicator '
-bash_indicator = 'bsh'
-fish_indicator = 'fsh'
-zsh_indicator = 'zsh'
-powershell_indicator = 'psh'
-ion_indicator = 'ion'
-elvish_indicator = 'esh'
-tcsh_indicator = 'tsh'
-nu_indicator = 'nu'
-xonsh_indicator = 'xsh'
+format = '$indicator'
+bash_indicator = '\([bash](green)\) '
+fish_indicator = '\([](yellow)\) '
+zsh_indicator = ''
+powershell_indicator = '\([_](cyan)\) '
+ion_indicator = '\([⚛️](red dimmed)\) '
+elvish_indicator = '\([elvish](blue dimmed)\)'
+tcsh_indicator = '\([tcsh](8)\) '
+nu_indicator = '\([μ](8)\) '
+xonsh_indicator = '\([xonsh](magenta dimmed)\) '
 unknown_indicator = ''
-disabled = true
+disabled = false
 
 [shlvl]
 threshold = 2
-format = '[$symbol$shlvl]($style) '
-symbol = '↕️  '
-repeat = false
+format = '[$symbol]($style) '
+symbol = '!'
+repeat = true
 style = 'bold yellow'
-disabled = true
+disabled = false
 
 [singularity]
 symbol = ''
@@ -682,8 +682,8 @@ detect_files = []
 detect_folders = ['.terraform']
 
 [time]
-format = 'at [$time]($style) '
-style = 'bold yellow'
+format = '🕒[$time]($style) '
+style = 'bold white dimmed'
 use_12hr = false
 disabled = true
 utc_time_offset = 'local'
