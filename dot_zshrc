@@ -33,6 +33,7 @@ case "$(_platform)" in
     source /usr/share/fzf/key-bindings.zsh
     ;;
   'Darwin') 
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     source /opt/homebrew/Cellar/fzf/*/shell/key_bindings.zsh
     source <(kubectl completion zsh)
     ;;
