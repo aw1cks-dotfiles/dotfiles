@@ -13,6 +13,7 @@ local secondary_modifier = "ALT|SHIFT";
 
 local font_name = {
   {family = "Iosevka", stretch = "UltraCondensed"},
+  "Twitter Color Emoji",
 };
 local font_size = 14;
 
