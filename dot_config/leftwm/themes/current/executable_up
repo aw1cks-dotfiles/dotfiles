@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# https://github.com/koalaman/shellcheck/issues/2343
+# shellcheck disable=SC1091
+. "${XDG_CONFIG_HOME:-$HOME/.config}/leftwm/themes/current/common.sh"
+
+_theme load
+
+_run_if_binary_exists picom --daemon --experimental-backends --backend glx
+_run_if_binary_exists xsetroot -cursor_name left_ptr
+_run_if_binary_exists "${XDG_DATA_HOME:-$HOME/.local}/bin/randbg" &
+_run_if_binary_exists /usr/libexec/polkit-gnome-authentication-agent-1
+_run_if_file_exists "${HOME}/.Xresources" "xrdb ${HOME}/.Xresources"
+_start_if_service_exists dunst
+
+_eww start

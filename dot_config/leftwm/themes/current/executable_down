@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# https://github.com/koalaman/shellcheck/issues/2343
+# shellcheck disable=SC1091
+. "${XDG_CONFIG_HOME:-$HOME/.config}/leftwm/themes/current/common.sh"
+
+_kill_if_running picom
+_stop_if_service_exists dunst
+
+_eww stop
+_theme unload

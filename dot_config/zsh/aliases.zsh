@@ -23,6 +23,8 @@ alias ll='ls -l --color=auto'
 alias vi='nvim'
 alias vim='nvim'
 
+alias top='bpytop'
+
 alias sudo='sudo '
 
 alias g='git'
