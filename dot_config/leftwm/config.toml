@@ -240,7 +240,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run $dmenu_bottom -fn sans-serif:pixelsize=17 -nb black -nf white -sb white -sf black"
+value = "rofi -show run"
 modifier = ["modkey"]
 key = "d"
 

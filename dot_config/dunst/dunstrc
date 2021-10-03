@@ -1,0 +1,83 @@
+[global]
+
+# Display
+
+  monitor               = 0
+  follow                = mouse
+  geometry              = "400x5-20+46"
+  indicate_hidden       = yes
+  shrink                = no
+  transparency          = 30
+  padding               = 15
+  horizontal_padding    = 15
+  frame_width           = 1
+  frame_color           = "#436399"
+  separator_height      = 1
+  separator_color       = "#404040"
+  sort                  = yes
+  idle_threshold        = 90
+
+# Text
+
+  font                  = sans-serif 11
+  line_height           = 17
+  markup                = full
+  format                = "<span weight='bold'>%s</span>\n%b"
+  alignment             = center
+  vertical_alignment    = center
+  show_age_threshold    = 60
+  word_wrap             = yes
+  ignore_newline        = no
+  stack_duplicates      = true
+  hide_duplicate_count  = false
+  show_indicators       = no
+
+# Icons
+
+  icon_position         = left
+  min_icon_size         = 48
+  max_icon_size         = 128
+  icon_path             = /home/alex/.icons/oomox/actions/22/:/home/alex/.icons/oomox/actions/48/:/home/alex/.icons/oomox/apps/scalable/:/home/alex/.icons/oomox/categories/22/:/home/alex/.icons/oomox/devices/48/:/home/alex/.icons/oomox/emblems/16/:/home/alex/.icons/oomox/emotes/:/home/alex/.icons/oomox/mimetypes/48/:/home/alex/.icons/oomox/panel/22-light/:/home/alex/.icons/oomox/places/48-blue/:/home/alex/.icons/oomox/status/22/
+
+# History
+
+  sticky_history        = yes
+  history_length        = 20
+
+# Notification Levels
+
+  [urgency_low]
+    background          = "#282828"
+    foreground          = "#EDEFF1"
+    highlight           = "#87A5BF"
+    timeout             = 8
+
+  [urgency_normal]
+    background          = "#282828"
+    foreground          = "#EDEFF1"
+    highlight           = "#87A5BF"
+    timeout             = 8
+
+  [urgency_critical]
+    background          = "#282828"
+    foreground          = "#EDEFF1"
+    highlight           = "#87A5BF"
+    timeout             = 8
+
+# Misc
+
+  browser               = firefox
+  #demu                  =
+  always_run_script     = true
+  title                 = Dunst
+  class                 = Dunst
+
+  mouse_left_click      = close_current
+  mouse_right_click     = do_action, close_current
+  mouse_middle_click    = close_all
+
+  [shortcuts]
+    close               = ctrl+space
+    close_all           = ctrl+shift+space
+    context             = ctrl+shift+period
+
