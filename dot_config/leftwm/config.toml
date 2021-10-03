@@ -24,8 +24,8 @@ layouts = [
 
 [[keybind]]
 command = "HardReload"
-modifier = ["modkey", "Shift"]
-key = "b"
+modifier = ["modkey", "Control"]
+key = "r"
 
 [[keybind]]
 command = "SoftReload"
@@ -222,6 +222,12 @@ key = "e"
 
 [[keybind]]
 command = "Execute"
+value = "/bin/sh -c '${XDG_DATA_HOME:-$HOME/.local}/bin/toggle_bar.sh'"
+modifier = ["modkey", "Shift"]
+key = "b"
+
+[[keybind]]
+command = "Execute"
 value = "wezterm"
 modifier = ["modkey"]
 key = "Return"
@@ -273,6 +279,13 @@ command = "Execute"
 value = "mumble"
 modifier = ["modkey"]
 key = "bracketright"
+
+# Toggle Mumble mute
+[[keybind]]
+command = "Execute"
+value = "mumble rpc toggledeaf"
+modifier = ["modkey", "Shift"]
+key = "KP_Enter"
 
 [[keybind]]
 command = "Execute"

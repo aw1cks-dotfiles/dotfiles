@@ -133,9 +133,14 @@ function pastebin() {
   shift "$((OPTIND-1))"
 
   if [ $# -eq 0 ]; then
-    tee /dev/tty < /dev/stdin | curl -X PUT -d @- https://p.mort.coffee
+    tee /dev/tty < /dev/stdin | curl -s -X PUT -d @- https://p.mort.coffee | read URL
   else
-    eval "${use_sudo} curl --upload-file ${1} https://p.mort.coffee"
+    eval "${use_sudo} curl -s --upload-file ${1} https://p.mort.coffee" | read URL
+  fi
+
+  if [ -n "${URL}" ]; then
+    copy <<< "${URL}"
+    <<< "${URL}"
   fi
 }
 

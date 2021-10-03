@@ -60,6 +60,14 @@ _eww() {
   esac
 }
 
+_toggle_eww() {
+  if pgrep eww > /dev/null 2>&1 ; then
+    _eww stop
+  else
+    _eww start
+  fi
+}
+
 _theme() {
   PIPE="${XDG_RUNTIME_DIR}/leftwm/commands.pipe"
   case "${1}" in
