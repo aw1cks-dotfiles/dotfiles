@@ -15,7 +15,8 @@
   separator_height      = 1
   separator_color       = "#404040"
   sort                  = yes
-  idle_threshold        = 90
+  idle_threshold        = 15
+  timeout               = 20
 
 # Text
 
@@ -25,7 +26,6 @@
   format                = "<span weight='bold'>%s</span>\n%b"
   alignment             = center
   vertical_alignment    = center
-  show_age_threshold    = 60
   word_wrap             = yes
   ignore_newline        = no
   stack_duplicates      = true

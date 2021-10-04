@@ -50,8 +50,8 @@
 (deflisten music :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
 
-(defpoll time :interval "10s"
-  "date '+%H:%M    %d %b, %Y  '")
+(defpoll time :interval "1s"
+  "~/.config/leftwm/themes/current/datefmt.sh")
 
 (deflisten wm-tags
   "leftwm-state -w 0 -t ~/.config/leftwm/themes/current/template.liquid")

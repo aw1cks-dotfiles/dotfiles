@@ -35,3 +35,5 @@ alias kns='kubens'
 
 alias yayskip='yay -S --mflags --skipinteg'
 alias ytm='yt-dlp -x --audio-format mp3'
+
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/neofetch/ascii" ] && alias neofetch="neofetch --source ${XDG_CONFIG_HOME:-$HOME/.config}/neofetch/ascii"
