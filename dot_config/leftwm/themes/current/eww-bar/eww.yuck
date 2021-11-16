@@ -1,12 +1,12 @@
 (defwidget bar1 []
   (centerbox :orientation "h"
-    (workspaces)
+    (workspaces-mon1)
     (music)
     (sidestuff)))
 
 (defwidget bar2 []
   (centerbox :orientation "h"
-    (workspaces)
+    (workspaces-mon2)
     (music)
     (sidestuff)))
 
@@ -20,13 +20,21 @@
             :onchange "")
     time))
 
-(defwidget workspaces []
+(defwidget workspaces-mon1 []
   (box :class "workspaces"
        :orientation "h"
        :space-evenly true
        :halign "start"
        :spacing 10
-    (literal :content {wm-tags})))
+    (literal :content {wm-tags-mon1})))
+
+(defwidget workspaces-mon2 []
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+       :spacing 10
+    (literal :content {wm-tags-mon2})))
 
 (defwidget music []
   (box :class "music"
@@ -34,7 +42,6 @@
        :space-evenly false
        :halign "center"
     {music != "" ? "🎵 ${music}" : ""}))
-
 
 (defwidget metric [label value onchange]
   (box :orientation "h"
@@ -53,8 +60,14 @@
 (defpoll time :interval "1s"
   "~/.config/leftwm/themes/current/datefmt.sh")
 
-(deflisten wm-tags
+(deflisten wm-tags-mon1
   "leftwm-state -w 0 -t ~/.config/leftwm/themes/current/template.liquid")
+
+(deflisten wm-tags-mon2
+  "leftwm-state -w 1 -t ~/.config/leftwm/themes/current/template.liquid")
+
+(deflisten window-title :initial ""
+  "leftwm-state -s '{{ window_title }}'")
 
 (defwindow bar1
   :monitor 0
