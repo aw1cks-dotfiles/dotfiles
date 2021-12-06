@@ -18,7 +18,7 @@ alias ncdu='ncdu --color dark'
 alias tmux='tmux -u'
 
 alias l='ls -alh --color=auto'
-alias ll='ls -l --color=auto'
+alias ll='ls -lh --color=auto'
 
 alias vi='nvim'
 alias vim='nvim'
@@ -37,3 +37,23 @@ alias yayskip='yay -S --mflags --skipinteg'
 alias ytm='yt-dlp -x --audio-format mp3'
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/neofetch/ascii" ] && alias neofetch="neofetch --source ${XDG_CONFIG_HOME:-$HOME/.config}/neofetch/ascii"
+
+alias xz='xz -T0'
+alias unxz='xz -d -T0'
+
+alias zstd='zstd -T0'
+alias unzstd='zstd -d -T0'
+
+if _check_bin_present 'pbzip2' ; then
+  alias bzip2='pbzip2'
+  alias bunzip2='pbzip2 -d'
+else
+  :
+fi
+
+if _check_bin_present 'pigz' ; then
+  alias gzip='pigz'
+  alias gunzip='pigz -d'
+else
+  :
+fi

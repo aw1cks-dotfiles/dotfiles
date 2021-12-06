@@ -1,9 +1,9 @@
 configuration {
   modi: "drun,run";
   font: "sans-serif 11";
-  theme: "theme.rasi";
   show-icons: true;
   icon-theme: "oomox";
   display-drun: "";
   display-run: "";
 }
+@theme "theme.rasi"
