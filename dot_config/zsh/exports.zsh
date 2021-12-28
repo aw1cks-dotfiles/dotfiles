@@ -1,5 +1,5 @@
-export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin:$GOPATH/flutter/bin"
-export GOPATH=$HOME/.local/go
+export GOPATH="${HOME}/.local/go"
+export PATH="${PATH}:${HOME}/.local/bin:${GOPATH}/bin:${GOPATH}/flutter/bin"
 
 export EDITOR=nvim
 export QT_QPA_PLATFORMTHEME=qt5ct

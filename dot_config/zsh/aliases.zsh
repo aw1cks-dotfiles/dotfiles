@@ -44,7 +44,10 @@ alias unxz='xz -d -T0'
 alias zstd='zstd -T0'
 alias unzstd='zstd -d -T0'
 
-if _check_bin_present 'pbzip2' ; then
+if _check_bin_present 'lbzip2' ; then
+  alias bzip2='lbzip2'
+  alias bunzip2='lbzip2 -d'
+elif _check_bin_present 'pbzip2' ; then
   alias bzip2='pbzip2'
   alias bunzip2='pbzip2 -d'
 else
