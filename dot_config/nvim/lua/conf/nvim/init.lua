@@ -1,0 +1,5 @@
+require('conf.nvim.autocmd')
+require('conf.nvim.globals')
+require('conf.nvim.search')
+require('conf.nvim.splits')
+require('conf.nvim.tabs')
