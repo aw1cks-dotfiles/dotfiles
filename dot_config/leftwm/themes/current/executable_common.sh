@@ -71,14 +71,11 @@ _toggle_eww() {
 _theme() {
   PIPE="${XDG_RUNTIME_DIR}/leftwm/commands.pipe"
   case "${1}" in
-    'load') 
-      printf 'LoadTheme %s/leftwm/themes/current/theme.toml' \
-        "${XDG_CONFIG_HOME:-$HOME/.config}" \
-        > "${PIPE}"
+    'load')
+      leftwm-command "LoadTheme ${XDG_CONFIG_HOME:-$HOME/.config}/leftwm/themes/current/theme.toml"
       ;;
     'unload')
-      printf 'UnloadTheme' \
-        > "${PIPE}"
+      leftwm-command 'UnloadTheme'
       ;;
     *)
       ;;

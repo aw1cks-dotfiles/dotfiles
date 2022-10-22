@@ -4,7 +4,7 @@
 # check binary present, else return an error
 function _check_bin_present() {
   if [ -z "$(command -v ${1})" ]; then
-    printf 'Binary %s not in $PATH\n' "${1}"
+    printf 'Binary %s not in $PATH\n' "${1}" >&2
     return 1
   fi
 }
@@ -198,5 +198,26 @@ function yay() {
         eval "${YAY_CMD} $@"
         ;;
     esac
+  fi
+}
+
+function venvup() {
+  if [ ! -d "${1}" ] ; then
+    python3 -m venv "${1}"
+  fi
+
+  source "${1}/bin/activate"
+}
+
+# venvdown is aliased to 'deactivate'
+
+# Deactivate AND remove venv dir
+function venvclean() {
+  if [ -n "${VIRTUAL_ENV}" ] ; then
+    local VENVDIR="${VIRTUAL_ENV}"
+    deactivate
+    rm -rf "${VENVDIR}"
+  else
+    printf 'No virtualenv currently active\n' >&2
   fi
 }

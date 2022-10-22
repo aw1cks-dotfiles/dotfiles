@@ -134,6 +134,76 @@ return {
         SpawnTab = "CurrentPaneDomain"
       },
     },
+    {
+      key    = "1",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 0
+      },
+    },
+    {
+      key    = "2",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 1
+      },
+    },
+    {
+      key    = "3",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 2
+      },
+    },
+    {
+      key    = "4",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 3
+      },
+    },
+    {
+      key    = "5",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 4
+      },
+    },
+    {
+      key    = "6",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 5
+      },
+    },
+    {
+      key    = "7",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 6
+      },
+    },
+    {
+      key    = "8",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 7
+      },
+    },
+    {
+      key    = "9",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 8
+      },
+    },
+    {
+      key    = "0",
+      mods   = primary_modifier,
+      action ={
+        ActivateTab = 10
+      },
+    },
   },
   --
   font = wezterm.font_with_fallback(font_name),
@@ -141,12 +211,14 @@ return {
   freetype_load_flags = "NO_HINTING|MONOCHROME",
   colors = {
     background = "#181818",
-    cursor_bg = "#000000",
     selection_bg = "#8d9e9b",
 
     foreground = "#d8d8d8",
-    cursor_fg = "#000000",
     selection_fg = "#000000",
+
+    cursor_bg = "#52ad70",
+    cursor_fg = "#52ad70",
+    cursor_border = "#52ad70",
 
     split = "#21385c",
 
@@ -169,7 +241,7 @@ return {
     top = window_pad_margin,
     bottom = window_pad_margin,
   },
-  tab_max_width = 32,
+  tab_max_width = 64,
   --
   visual_bell = {
     fade_in_function = "Linear",
