@@ -58,7 +58,7 @@
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
 
 (defpoll time :interval "1s"
-  "~/.config/leftwm/themes/current/datefmt.sh")
+  "~/.config/leftwm/themes/current/eww-bar/scripts/datefmt.sh")
 
 (deflisten wm-tags-mon1
   "leftwm-state -w 0 -t ~/.config/leftwm/themes/current/template.liquid")

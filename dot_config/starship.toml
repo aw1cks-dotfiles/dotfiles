@@ -181,15 +181,6 @@ disabled = true
 [elm]
 disabled = true
 
-[env_var.GL_TOKEN]
-format = ''
-
-[env_var.GOVC_URL]
-format = ''
-
-[env_var.RT_APIKEY]
-format = 'ﯲ'
-
 [erlang]
 disabled = true
 
@@ -244,25 +235,20 @@ disabled = false
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
 style = '158 bold'
-stashed = '\$'
-ahead = '⇡ '
-behind = '⇣ '
+stashed = ' \$ '
+ahead = ' ⇡  '
+behind = ' ⇣  '
 up_to_date = ''
-diverged = '⇕ '
-conflicted = '='
-deleted = '✘ '
-renamed = '»'
-modified = '!'
-staged = '+'
-untracked = '?'
+diverged = ' ⇕  '
+conflicted = ' = '
+deleted = ' ✘  '
+renamed = ' » '
+modified = ' ! '
+staged = ' + '
+untracked = ' ? '
 disabled = false
 
 [golang]
-format = '(\[[${symbol}${version}]($style)\])'
-version_format = 'v${raw}'
-symbol = '🐹 '
-style = 'cyan'
-disabled = false
 detect_extensions = ['go']
 detect_files = [
     'go.mod',
@@ -273,6 +259,12 @@ detect_files = [
     '.go-version',
 ]
 detect_folders = ['Godeps']
+format = '(\[([${symbol}]($style)[$version](dimmed))\])'
+style = 'cyan'
+symbol = '🐹'
+#version_format = 'v${raw}'
+version_format = '${major}.${minor}'
+disabled = false
 
 [haskell]
 detect_extensions = [
@@ -360,8 +352,8 @@ disabled = false
 
 [kubernetes.context_aliases]
 ".*/(?P<var_cluster>[\\w-]+)/.*" = "$var_cluster"
-"gke_.*_(?P<var_cluster>[\\w-]+)" = "GKE $var_cluster"
-"kind-(?P<var_cluster>[\\w-]+)" = "KIND $var_cluster"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "$var_cluster{GKE}"
+"kind-(?P<var_cluster>[\\w-]+)" = "$var_cluster{KIND}"
 
 [line_break]
 disabled = true
