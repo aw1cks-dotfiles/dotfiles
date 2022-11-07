@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# shellcheck disable=SC2016
+template='{{/* BEGIN */}}
+{{ $reset := "\033[0m" -}}
+{{- $bold := "\033[1m" -}}
+{{- $yellow := "\033[33m" -}}
+{{- $blue := "\033[34m" -}}
+{{- $formatstring := "%s: %s\n" -}}
+{{- if index . "data" -}}
+{{-   if gt (len .data) 0 -}}
+{{ printf "%s%ssecret%s:    %s" $bold $blue $reset .metadata.name }}
+{{ printf "%s%snamespace%s: %s" $bold $blue $reset .metadata.namespace }}
+{{      range $k, $v := .data -}}
+{{        printf "%s%skey%s: %s" $bold $yellow $reset $k }}
+{{        printf "%s%s%s\n" $bold ($v | base64decode) $reset }}
+{{-     end }}
+
+{{   end -}}
+{{- else -}}
+{{-   range $_, $sec := .items -}}
+
+{{-     if index $sec "data"  -}}
+{{-       if gt (len $sec.data) 0 -}}
+{{          printf "%s%ssecret%s:    %s" $bold $blue $reset .metadata.name }}
+{{          printf "%s%snamespace%s: %s" $bold $blue $reset .metadata.namespace }}
+{{          range $k, $v := $sec.data -}}
+{{            printf "%s%skey%s: %s" $bold $yellow $reset $k }}
+{{            printf "%s%s%s\n" $bold ($v | base64decode) $reset }}
+{{-         end }}
+{{-       end }}
+{{-     end }}
+
+{{    end }}
+{{- end -}}
+{{/* END */}}'
+
+# shellcheck disable=SC2068
+exec kubectl get secret -otemplate="${template}" $@

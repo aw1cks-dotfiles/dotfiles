@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # shellcheck disable=SC2068
-exec kubectl describe pod $@
+exec kubectl delete $@

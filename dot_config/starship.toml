@@ -351,9 +351,10 @@ style = 'cyan bold'
 disabled = false
 
 [kubernetes.context_aliases]
-".*/(?P<var_cluster>[\\w-]+)/.*" = "$var_cluster"
-"gke_.*_(?P<var_cluster>[\\w-]+)" = "$var_cluster{GKE}"
-"kind-(?P<var_cluster>[\\w-]+)" = "$var_cluster{KIND}"
+'.*/(?P<var_cluster>[\\w-]+)/.*' = '$var_cluster'
+"gke_.*_(?P<var_cluster>[\\w-]+)" = '$var_cluster GKE'
+'kind-(?P<var_cluster>[\\w-]+)' = '$var_cluster KIND'
+'kind-kind' = 'kind'
 
 [line_break]
 disabled = true

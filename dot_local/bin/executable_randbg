@@ -2,8 +2,11 @@
 
 BGDIR='/home/alex/.local/share/wallpapers/images'
 
-while true
-do
-  feh --no-fehbg --bg-scale --randomize -r $BGDIR
+while true; do
+  feh \
+      --no-fehbg \
+      --bg-scale \
+      --randomize \
+      -r "${BGDIR}"
   sleep 60
 done
